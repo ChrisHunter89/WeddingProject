@@ -1,0 +1,160 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Text Styles */
+.text-jumbo {
+    font-size: 64px!important
+}
+
+.text-wide-spacing {
+    letter-spacing: 4px
+}
+
+.text-white {
+    color:#fff!important
+}
+
+.text-center {
+     text-align: center
+ }
+
+/* Display Container */
+.display-container {
+    position: relative
+}
+
+.display-container-center {
+    position:center
+}
+
+/* Alignment */
+.display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%)
+}
+
+.bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.top {
+    top: 0
+}
+
+.bottom {
+    bottom: 0
+}
+
+.hide-small {
+    display: none!important
+}
+
+.padding {
+    padding: 8px 16px !important
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important
+}
+
+.padding-256 {
+    padding-top: 40% !important;
+    padding-bottom: 40% !important
+}
+
+.padding-left {
+    padding-left: 384px !important
+}
+
+.padding-right {
+    padding-right: 384px !important
+}
+
+/* Color */
+.grayscale-min {
+    filter: grayscale(50%)
+}
+
+.img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.opacity-min {
+    opacity: 0.75
+}
+
+.hover-opacity-off:hover {
+    opacity: 1
+}
+
+/* Object Types */
+.bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.baritem {
+    padding: 8px 16px; float: left;width: auto;border: none;outline: none;display: block
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.container:after,
+.container:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.burgundybackground { background-color: #800020 }
+
+.font-Large{font-size: medium}
+
+.content-slight-border {
+    max-width: 850px;
+    margin: auto
+}
+
+.rounded{border-radius:4px}

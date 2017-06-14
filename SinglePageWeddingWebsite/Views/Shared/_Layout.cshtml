@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicky &amp; Chris' Wedding Website</title>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
+<style>
+    body, h1, h2 {
+        font-family: "Raleway", sans-serif;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    p {
+        line-height: 2;
+    }
+
+    .bgimg, .bgimg2 {
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .bgimg {
+        background-image: url("../../Images/IMAG0134.jpg");
+    }
+
+    .bgimg2 {
+        background-image: url("../../Images/Venice_Canal_Bridge.jpg");
+    }
+    .bgimg3 {
+        background-image: url("../../Images/HeatonHouse.jpg");
+    }
+
+</style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+</head>
+<body class="burgundybackground grayscale-min opacity-min">
+    <header class="display-container text-wide-spacing bgimg grayscale-min" style="height: 1000px " id="home">
+        <div class="display-middle text-white text-center" style="padding-top: 10%">
+            <h1 class="text-jumbo">Vicky & Chris</h1>
+            <h2>Are getting married</h2>
+            <h2><b>14.02.2019</b></h2>
+        </div>
+    </header>
+    <hr />
+    <div class="display-container-center padding-64 text-center burgundybackground  opacity-min" style="height: 1000px; padding-top: 15%" id="us">
+        <div class="text-white text-center font-Large content-slight-border" >
+            <h1>The Rest Is History</h1>
+            <br />
+            <p style="padding-bottom: 6.5%; padding-top: 2.5%">
+                <i>
+                    You all know we're getting married. Vicky and I have been together for almost 9 years and we first met on the first day of university.
+                    <br />
+                    From the moment I first saw Vicky I thought she was the most beautiful person I'd ever seen and still do.
+                    <br />
+                    Although it took 4 months for me to ask Vicky to be my girlfriend, I always looked forward to speaking to her every night on MSN (remember that!).
+                    <br />
+                    <br />
+                    Over the years we've been together we've shared so many great experiences together.
+                    From university and living in student digs, holidays in some pretty cool places, fads that come and go (mainly Chris), to our first full-time job and buying our own home together!
+                    <br />
+                    <br />
+                    I'd known for year that I wanted to marry Vicky but could never afford to buy her a ring but after 2365 days I finally proposed!
+                    So now we'd like you to share our most exciting adventure yet and join us on our wedding day!
+                </i>
+            </p>
+            <h1><i>We'd Love You To Be There!</i></h1>
+        </div>
+    </div>
+    <hr class="grayscale-min opacity-min" />
+    <div class="display-container bgimg2">
+        <div class="display-middle text-wide-spacing text-white text-center">
+        </div>
+    </div>
+    <hr class="grayscale-min opacity-min" />
+    <div class="display-container-center padding-64 text-center burgundybackground grayscale-min opacity-min" style="height: 1000px; padding-top: 15%" id="wedding">
+        <div class="text-white text-center font-Large content-slight-border" style="padding-top: 2.5%">
+            <h1 class="text-jumbo"><i>The Big Day</i></h1>
+            <br />
+            <h1><i>The Church</i></h1>
+            <p>
+                <i>
+                    The day will begin at spectacular church that is St Michael's Church in ditton.
+                    St Michael's hold a special place in the hearts of my family and is the church that I grew up attending mass at.
+                </i>
+            </p>
+            <br />
+            <br />
+            <h1><i>The Reception</i></h1>
+            After we say I do there will be plenty of time for photographs but don't hang around too long as it's on to the reception to eat, drink and celebrate the Nulty and Hunter families coming together.
+            <br />
+            <br />Heaton House Farm is a working farm as well as a beautiful wedding venue.
+            <br />We instantly fell in love with Heaton House Farm and we hope you will too.
+            Once you see the venue and it's panoramic view overlooking the 3 counties of Cheshire, Staffordshire and Derbyshire, it'll be hard now to!
+            <br />
+        </div>
+     </div>
+    <hr class="grayscale-min opacity-min"/>
+        <div class="display-container-center padding-64 text-center burgundybackground grayscale-min opacity-min" style="height: 1000px; padding-top: 15%" id="rsvp">
+            <div class="text-white text-center font-Large ">
+                <h1 class="text-jumbo"><i>We'll See You At The Alter!</i></h1>
+                <h1>RSVP</h1>
+                <img class="img-rounded display-container-center" src="~/Images/HeatonHouse.jpg" />
+            </div>
+        </div>
+
+                <div class="navbar navbar-inverse navbar-fixed-bottom container opacity-min">
+                    <div class="text-white text-center padding opacity-min hover-opacity-off">
+                        <a href="#home" style="width: 25%" class="baritem button">Home</a>
+                        <a href="#us" style="width: 25%" class="baritem button">Vicky & Chris</a>
+                        <a href="#wedding" style="width: 25%" class="baritem button">The big day</a>
+                        <a href="#rsvp" style="width: 25%" class="baritem button">RSVP</a>
+                    </div>
+                </div>
+
+                <div class="container body-content">
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>&copy; Last Published - @DateTime.Now.Year </p>
+                    </footer>
+                </div>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
+                <script>
+                    $('.smooth').on('click',
+                        function () {
+                            $.smoothScroll({
+                                scrollElement: $('body'),
+                                scrollTarget: '#' + this.id
+                            });
+
+                            return false;
+                        });
+                </script>
+</body>
+</html>
