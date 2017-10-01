@@ -11,30 +11,24 @@
     body, h1, h2 {
         font-family: "Raleway", sans-serif;
     }
-
-    body, html {
-        height: 100%;
-    }
-
     p {
         line-height: 2;
     }
-
     .bgimg, .bgimg2 {
         min-height: 100%;
         background-position: center;
         background-size: cover;
     }
-
     .bgimg {
         background-image: url("../../Images/IMAG0134.jpg");
     }
-
     .bgimg2 {
-        background-image: url("../../Images/Venice_Canal_Bridge.jpg");
+        background-image: linear-gradient(to bottom, #d8cccc, transparent 40%), 
+            linear-gradient(to top, #d8cccc, transparent 40%), 
+            url('../../Images/Venice_Canal_Bridge.jpg');
     }
     .bgimg3 {
-        background-image: url("../../Images/HeatonHouse.jpg");
+        background-image: radial-gradient(#d8cccc, transparent 40%), url("../../Images/HeatonHouse.jpg");
     }
 
 </style>
@@ -42,17 +36,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 </head>
-<body class="burgundybackground grayscale-min opacity-min">
+<body class="bodybackground grayscale-min opacity-min">
     <header class="display-container text-wide-spacing bgimg grayscale-min" style="height: 1000px " id="home">
-        <div class="display-middle text-white text-center" style="padding-top: 10%">
+        <div class="display-middle text-white text-center" >
             <h1 class="text-jumbo">Vicky & Chris</h1>
             <h2>Are getting married</h2>
             <h2><b>14.02.2019</b></h2>
         </div>
     </header>
     <hr />
-    <div class="display-container-center padding-64 text-center burgundybackground  opacity-min" style="height: 1000px; padding-top: 15%" id="us">
-        <div class="text-white text-center font-Large content-slight-border" >
+    <div class="display-container-center padding-64 text-center bodybackground  opacity-min" style="height: auto; padding-top: 15%" id="us">
+        <div class="text-black text-center font-Large content-slight-border" >
             <h1>The Rest Is History</h1>
             <br />
             <p style="padding-bottom: 6.5%; padding-top: 2.5%">
@@ -76,39 +70,41 @@
         </div>
     </div>
     <hr class="grayscale-min opacity-min" />
-    <div class="display-container bgimg2">
-        <div class="display-middle text-wide-spacing text-white text-center">
-        </div>
+    <div class="display-container bgimg2 gradient" style="height:700px;">
     </div>
     <hr class="grayscale-min opacity-min" />
-    <div class="display-container-center padding-64 text-center burgundybackground grayscale-min opacity-min" style="height: 1000px; padding-top: 15%" id="wedding">
-        <div class="text-white text-center font-Large content-slight-border" style="padding-top: 2.5%">
+    <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: 1000px; padding-top: 15%" id="wedding">
+        <div class="text-black text-center font-Large content-slight-border" style="padding-top: 2.5%">
             <h1 class="text-jumbo"><i>The Big Day</i></h1>
             <br />
             <h1><i>The Church</i></h1>
             <p>
                 <i>
-                    The day will begin at spectacular church that is St Michael's Church in ditton.
+                    The day will begin at spectacular church that is St Michael's Church in ditton.<br />
                     St Michael's hold a special place in the hearts of my family and is the church that I grew up attending mass at.
                 </i>
             </p>
             <br />
             <br />
             <h1><i>The Reception</i></h1>
-            After we say I do there will be plenty of time for photographs but don't hang around too long as it's on to the reception to eat, drink and celebrate the Nulty and Hunter families coming together.
-            <br />
-            <br />Heaton House Farm is a working farm as well as a beautiful wedding venue.
-            <br />We instantly fell in love with Heaton House Farm and we hope you will too.
-            Once you see the venue and it's panoramic view overlooking the 3 counties of Cheshire, Staffordshire and Derbyshire, it'll be hard not to!
-            <br />
+            <p>
+                <i>
+                    After we say I do there will be plenty of time for photographs but don't hang around too long as it's on to the reception to eat, drink and celebrate the Nulty and Hunter families coming together.
+                    <br />
+                    <br />Heaton House Farm is a working farm as well as a beautiful wedding venue.
+                    <br />We instantly fell in love with Heaton House Farm and we hope you will too.
+                    Once you see the venue and it's panoramic view overlooking the 3 counties of Cheshire, Staffordshire and Derbyshire, it'll be hard not to do the same!
+                    <br />
+                </i>
+            </p>
         </div>
      </div>
     <hr class="grayscale-min opacity-min"/>
-        <div class="display-container-center padding-64 text-center burgundybackground grayscale-min opacity-min" style="height: 1000px; padding-top: 15%" id="rsvp">
-            <div class="text-white text-center font-Large ">
-                <h1 class="text-jumbo"><i>We'll See You At The Alter!</i></h1>
+        <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: 900px; padding-top: 15%" id="rsvp">
+            <div class="text-black text-center font-Large ">
+                <h1 class="text-jumbo"><i>We'll See You At The Alter!</i></h1> @*Try to overlay text on image*@
                 <h1>RSVP</h1>
-                <img class="img-rounded display-container-center" src="~/Images/HeatonHouse.jpg" />
+                <img class="img-rounded display-container-center" src="~/Images/HeatonHouse.jpg"/>
             </div>
         </div>
 
@@ -123,16 +119,16 @@
 
                 <div class="container body-content">
                     @RenderBody()
-                    <hr />
+                    @*<hr />
                     <footer>
                         <p>&copy; Last Published - @DateTime.Now.Year </p>
-                    </footer>
+                    </footer>*@
                 </div>
 
-                @Scripts.Render("~/bundles/jquery")
-                @Scripts.Render("~/bundles/bootstrap")
-                @RenderSection("scripts", required: false)
-                <script>
+                @*@@*Scripts.Render("~/bundles/jquery")*@
+                @*@Scripts.Render("~/bundles/bootstrap")*@
+                @*@RenderSection("scripts", required: false)*@
+                @*<script>
                     $('.smooth').on('click',
                         function () {
                             $.smoothScroll({
@@ -142,6 +138,6 @@
 
                             return false;
                         });
-                </script>
+                </script>*@
 </body>
 </html>

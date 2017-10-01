@@ -1,6 +1,11 @@
-﻿body {
+﻿/*body {
     padding-top: 50px;
     padding-bottom: 20px;
+}*/
+
+html, body, header{
+    padding: 0;
+    margin: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -34,6 +39,10 @@ textarea {
 
 .text-white {
     color:#fff!important
+}
+
+.text-black{
+    color: #404040
 }
 
 .text-center {
@@ -149,6 +158,7 @@ textarea {
 }
 
 .burgundybackground { background-color: #800020 }
+.bodybackground { background-color: #d8cccc }
 
 .font-Large{font-size: medium}
 
@@ -158,3 +168,8 @@ textarea {
 }
 
 .rounded{border-radius:4px}
+
+
+/*.gradient {
+        linear-gradient: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 90%);
+}*/
