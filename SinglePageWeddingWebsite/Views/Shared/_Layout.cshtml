@@ -34,7 +34,6 @@
 </style>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 </head>
 <body class="bodybackground grayscale-min opacity-min">
     <header class="display-container text-wide-spacing bgimg grayscale-min" style="height: 1000px " id="home">
@@ -70,7 +69,7 @@
     </div>
     <div class="display-container bgimg2 gradient" style="height:700px;">
     </div>
-    <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: auto; padding-top: 15%" id="wedding">
+    <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: auto; padding-top: 15%" id="church">
         <div class="text-black text-center font-Large content-slight-border w3-half" style="padding-top: 2.5%">
             <h1 class="text-jumbo"><i>The Big Day</i></h1>
             <br />
@@ -81,12 +80,11 @@
                     St Michael's hold a special place in the hearts of my family and is the church that I grew up attending mass at.
                 </i>
             </p>
-            <br />
-            <br />
-        </div>
-        <div class="w3-half">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.9428987270503!2d-2.7645378841609594!3d53.36217682998232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b1df691ca89eb%3A0x2ac045324bdc156a!2sSt+Michaels+Church%2C+St+Michael&#39;s+Rd%2C+Widnes+WA8+8TF!5e0!3m2!1sen!2suk!4v1507663473314" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <br />
         </div>
+    </div>
+    <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: auto; padding-top: 15%" id="reception">
         <div class="w3-half text-center font-Large content-slight-border" style="padding-top: 2.5%">
             <h1><i>The Reception</i></h1>
             <p>
@@ -99,48 +97,38 @@
                     <br />
                 </i>
             </p>
-        </div>
-        <div class="w3-half">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.500370897363!2d-2.0806647843529578!3d53.1550607967231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4700f1ae9f27%3A0x4cc960e2a7d597b2!2sHeaton+House+Farm+Wedding+Venue!5e0!3m2!1sen!2suk!4v1507663654473" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
-            </iframe>    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.500370897363!2d-2.0806647843529578!3d53.1550607967231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4700f1ae9f27%3A0x4cc960e2a7d597b2!2sHeaton+House+Farm+Wedding+Venue!5e0!3m2!1sen!2suk!4v1507663654473" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: 900px; padding-top: 15%" id="rsvp">
+    @*<div class="display-container-center padding-64 text-center bodybackground grayscale-min opacity-min" style="height: 900px; padding-top: 15%" id="rsvp">
         <div class="text-black text-center font-Large ">
-            <h1 class="text-jumbo"><i>We'll See You At The Alter!</i></h1> @*Try to overlay text on image*@
-            <h1>RSVP</h1>
+            <h1 class="text-jumbo"><i>We'll See You At The Alter!</i></h1>*@ @*Try to overlay text on image*@
+            @*<h1>RSVP</h1>
             <img class="img-rounded display-container-center" src="~/Images/HeatonHouse.jpg" />
         </div>
-    </div>
-    <div class="navbar navbar-inverse navbar-fixed-bottom container opacity-min">
-        <div class="text-white text-center padding opacity-min hover-opacity-off">
+    </div>*@
+    <div class="navbar-inverse navbar-fixed-bottom container opacity-min">
+        <div id="navBar" class="text-white text-center padding opacity-min hover-opacity-off">
             <a href="#home" style="width: 25%" class="baritem button">Home</a>
             <a href="#us" style="width: 25%" class="baritem button">Vicky & Chris</a>
-            <a href="#wedding" style="width: 25%" class="baritem button">The big day</a>
-            <a href="#rsvp" style="width: 25%" class="baritem button">RSVP</a>
+            <a href="#church" style="width: 25%" class="baritem button">The Chruch</a>
+            <a href="#reception" style="width: 25%" class="baritem button">The Reception</a>
+            @*<a href="#rsvp" style="width: 25%" class="baritem button">RSVP</a>*@
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        @*<hr />
-            <footer>
-                <p>&copy; Last Published - @DateTime.Now.Year </p>
-            </footer>*@
     </div>
-
-    @*@@*Scripts.Render("~/bundles/jquery")*@
-    @*@Scripts.Render("~/bundles/bootstrap")*@
-    @*@RenderSection("scripts", required: false)*@
-    @*<script>
-            $('.smooth').on('click',
-                function () {
-                    $.smoothScroll({
-                        scrollElement: $('body'),
-                        scrollTarget: '#' + this.id
-                    });
-
-                    return false;
-                });
-        </script>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        $('.baritem').click(function () {
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 500);
+            return false;
+        });
+    </script>
 </body>
 </html>
